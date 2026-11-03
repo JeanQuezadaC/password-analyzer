@@ -1,4 +1,4 @@
-# 🔐 Password Analyzer
+#  Password Analyzer
 
 Herramienta de línea de comandos en Python que evalúa la fortaleza de una contraseña, estima cuánto tardaría un atacante en romperla y comprueba si ha aparecido en filtraciones de datos reales, **sin enviar nunca la contraseña a ningún servidor**.
 
@@ -7,7 +7,7 @@ Herramienta de línea de comandos en Python que evalúa la fortaleza de una cont
 <!-- Sustituye esta línea por una captura o GIF de la herramienta en funcionamiento -->
 <!-- ![Demo](docs/demo.gif) -->
 
-## ✨ Funcionalidades
+##  Funcionalidades
 
 - **Puntuación de fortaleza** de 0 a 4, con barra visual en color.
 - **Cálculo de entropía** en bits según la longitud y el tipo de caracteres.
@@ -18,7 +18,7 @@ Herramienta de línea de comandos en Python que evalúa la fortaleza de una cont
 - Salida en **JSON** para integrarla en otros scripts.
 - **Sin dependencias externas**: solo la librería estándar de Python.
 
-## 🛡️ Privacidad: cómo funciona el k-anonimato
+## Privacidad: cómo funciona el k-anonimato
 
 Enviar una contraseña a una API para saber si está filtrada sería un fallo de seguridad en sí mismo. Por eso la herramienta usa el modelo de **k-anonimato**:
 
@@ -36,16 +36,16 @@ Contraseña ──SHA-1──► 5BAA61E4C9B93F3F0682250B6CF8331B7EE68FD8
 
 Así, el servidor nunca sabe qué contraseña se ha consultado. Además, se envía la cabecera `Add-Padding` para que el tamaño de la respuesta no revele nada a quien espíe el tráfico, y la contraseña se introduce con `getpass` para que no quede ni en pantalla ni en el historial de la terminal.
 
-## 🚀 Instalación
+##  Instalación
 
 ```bash
-git clone https://github.com/TU-USUARIO/password-analyzer.git
+git clone https://github.com/JeanQzd/password-analyzer.git
 cd password-analyzer
 ```
 
 No hace falta instalar nada más (Python 3.9 o superior).
 
-## 💻 Uso
+##  Uso
 
 ```bash
 python -m password_analyzer            # análisis completo
@@ -75,7 +75,7 @@ Recomendaciones:
   ...
 ```
 
-## 🧪 Tests
+##  Tests
 
 ```bash
 python -m unittest -v
@@ -83,7 +83,7 @@ python -m unittest -v
 
 Los tests cubren el cálculo de entropía, la detección de patrones, el parseo de la respuesta de la API y verifican que **solo se envía el prefijo del hash** (k-anonimato).
 
-## 📁 Estructura
+## Estructura
 
 ```
 password-analyzer/
@@ -95,7 +95,7 @@ password-analyzer/
     └── test_analyzer.py
 ```
 
-## 📚 Qué he aprendido
+## Qué he aprendido
 
 - Por qué la **longitud** pesa más que la complejidad en la entropía de una contraseña.
 - Cómo funcionan los **ataques de fuerza bruta y de diccionario**, y por qué una contraseña filtrada es insegura aunque sea compleja.
@@ -103,22 +103,22 @@ password-analyzer/
 - Consumo de **APIs REST** con la librería estándar y manejo de errores de red.
 - Testing con `unittest` y **mocks** para no depender de servicios externos.
 
-## ⚠️ Limitaciones
+##  Limitaciones
 
 - La entropía se calcula sobre el alfabeto usado, por lo que **sobreestima** la fortaleza de contraseñas basadas en palabras del diccionario. Herramientas como [zxcvbn](https://github.com/dropbox/zxcvbn) usan modelos más sofisticados.
 - El tiempo de crackeo asume un hash rápido; con algoritmos lentos como bcrypt o Argon2 sería mucho mayor.
 
-## 🗺️ Próximas mejoras
+## Próximas mejoras
 
 - [ ] Generador de contraseñas y frases de contraseña seguras.
 - [ ] Detección de sustituciones típicas (`p@ssw0rd`).
 - [ ] Análisis por lotes desde un archivo.
 - [ ] Interfaz gráfica o web.
 
-## ⚖️ Aviso de uso ético
+##  Aviso de uso ético
 
 Herramienta creada con fines **educativos y defensivos**: para evaluar contraseñas propias y concienciar sobre buenas prácticas. No la uses para analizar credenciales de terceros sin autorización.
 
-## 📄 Licencia
+##  Licencia
 
 MIT
