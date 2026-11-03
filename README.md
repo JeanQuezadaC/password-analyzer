@@ -4,8 +4,7 @@ Herramienta de línea de comandos en Python que evalúa la fortaleza de una cont
 
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue) ![Dependencias](https://img.shields.io/badge/dependencias-ninguna-brightgreen) ![Licencia](https://img.shields.io/badge/licencia-MIT-lightgrey)
 
-<!-- Sustituye esta línea por una captura o GIF de la herramienta en funcionamiento -->
-<!-- ![Demo](docs/demo.gif) -->
+![Demo](docs/demo.png)
 
 ##  Funcionalidades
 
