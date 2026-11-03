@@ -38,7 +38,7 @@ Así, el servidor nunca sabe qué contraseña se ha consultado. Además, se env�
 ##  Instalación
 
 ```bash
-git clone https://github.com/JeanQzd/password-analyzer.git
+git clone https://github.com/JeanQuezadaC/password-analyzer.git
 cd password-analyzer
 ```
 
